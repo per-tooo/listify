@@ -1,0 +1,27 @@
+@import "normalize";
+@import "utils";
+@import "colors";
+
+@import "header.scss";
+
+body {
+  background: $light-bg-muted;
+  background: radial-gradient(circle, $light-bg-muted 0%, $light-bg 35%);
+
+  color: $light-text;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: $breakpoint;
+  }
+}

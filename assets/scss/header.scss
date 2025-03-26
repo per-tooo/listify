@@ -1,0 +1,33 @@
+header {
+  padding-top: 4em;
+
+  .action-bar {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 2em;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      padding: 8px;
+      border: 1px solid $light-border;
+      border-radius: 1em;
+
+      svg {
+        width: 1.75em;
+        height: 1.75em;
+        color: $light-text-muted;
+      }
+    }
+  }
+
+  .title {
+    font-size: 2em;
+    font-weight: 600;
+  }
+}

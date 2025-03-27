@@ -309,8 +309,67 @@ template {
   display: none;
 }
 
+.card {
+  margin-bottom: 1em;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1em;
+  box-shadow: 4px 4px 8px 0px rgb(130, 132, 160);
+}
+.card .title {
+  padding: 1rem 1rem 0 1rem;
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5em;
+}
+.card .preview {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.card .preview ul {
+  padding: 0;
+  list-style-type: none;
+}
+.card .preview ul li {
+  color: hsl(210, 11%, 36%);
+  margin-bottom: 0.125em;
+}
+.card .preview ul li:nth-child(3) {
+  opacity: 0.75;
+}
+.card .preview ul li:nth-child(4) {
+  opacity: 0.5;
+}
+.card .toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background-color: rgb(242, 242, 242);
+}
+.card .toolbar div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card .toolbar div div {
+  margin-left: 1rem;
+}
+.card .toolbar div div svg {
+  width: 1.75em;
+  height: 1.75em;
+}
+
 header {
   padding-top: 4em;
+  padding-bottom: 2em;
 }
 header .action-bar {
   display: flex;
@@ -343,7 +402,6 @@ body {
 }
 
 .container {
-  width: 100%;
   height: 100vh;
   padding: 0 1em;
 }

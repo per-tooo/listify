@@ -31,4 +31,12 @@ header {
     font-size: 2em;
     font-weight: 600;
   }
+
+  hr {
+    margin: 1em auto;
+
+    border: 0;
+    border-bottom: 1px solid $light-border;
+    width: 75%;
+  }
 }

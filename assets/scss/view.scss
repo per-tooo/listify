@@ -1,10 +1,11 @@
 .items {
-  height: 100vh;
+  max-height: 90vh;
   overflow-y: auto;
+  padding-bottom: 6em;
 }
 
 .input {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   display: flex;
 

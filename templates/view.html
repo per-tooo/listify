@@ -6,6 +6,8 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -53,7 +55,48 @@
       </header>
 
       <!-- groceries / need to by thingies -->
-      <div class="items"></div>
+      <div class="items">
+        <div class="item">
+          <!-- drag and drop / sort -->
+          <div class="handle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+              />
+            </svg>
+          </div>
+
+          <!-- text -->
+          <div class="text">
+            <span contenteditable="true">Tomaten</span>
+          </div>
+
+          <!-- delete -->
+          <div class="actions">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
 
       <!-- input -->
       <div class="input">

@@ -2,6 +2,45 @@
   max-height: 90vh;
   overflow-y: auto;
   padding-bottom: 6em;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border: 1px solid $light-border;
+    border-radius: 1em;
+
+    .handle {
+      padding: 8px 16px;
+      flex: 0;
+      svg {
+        width: 1.5em;
+      }
+    }
+
+    .text {
+      flex: 1;
+
+      padding: 8px 16px;
+      height: 100%;
+
+      border-left: 1px solid $light-border;
+      border-right: 1px solid $light-border;
+    }
+
+    .actions {
+      display: flex;
+      flex: 0;
+      flex-direction: row;
+      align-items: center;
+
+      padding: 8px 16px;
+      svg {
+        width: 1.5em;
+      }
+    }
+  }
 }
 
 .input {

@@ -449,6 +449,7 @@ body {
   background: rgb(242, 242, 242);
   background: radial-gradient(circle, rgb(242, 242, 242) 0%, rgb(247, 247, 247) 35%);
   color: hsl(240, 12%, 28%);
+  font-family: "cascadia code", "Courier New", Courier, monospace;
 }
 
 .container {

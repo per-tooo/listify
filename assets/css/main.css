@@ -335,7 +335,7 @@ template {
   list-style-type: none;
 }
 .card .preview ul li {
-  color: hsl(210, 11%, 36%);
+  color: hsl(210, 12%, 60%);
   margin-bottom: 0.125em;
 }
 .card .preview ul li:nth-child(3) {
@@ -384,11 +384,15 @@ header .action-bar div {
   padding: 8px;
   border: 1px solid hsl(0, 0%, 85%);
   border-radius: 1em;
+  cursor: pointer;
 }
 header .action-bar div svg {
   width: 1.75em;
   height: 1.75em;
-  color: hsl(210, 11%, 36%);
+  color: hsl(210, 12%, 60%);
+}
+header .action-bar div:hover svg {
+  color: hsl(240, 12%, 28%);
 }
 header .title {
   font-size: 2em;
@@ -416,9 +420,13 @@ header hr {
 .items .item .handle {
   padding: 8px 16px;
   flex: 0;
+  cursor: grab;
 }
 .items .item .handle svg {
   width: 1.5em;
+}
+.items .item .handle:active {
+  cursor: grabbing;
 }
 .items .item .text {
   flex: 1;
@@ -433,9 +441,14 @@ header hr {
   flex-direction: row;
   align-items: center;
   padding: 8px 16px;
+  cursor: pointer;
 }
 .items .item .actions svg {
   width: 1.5em;
+  color: hsl(210, 12%, 60%);
+}
+.items .item .actions:hover svg {
+  color: hsl(240, 12%, 28%);
 }
 
 .input {

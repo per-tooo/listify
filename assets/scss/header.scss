@@ -19,10 +19,18 @@ header {
       border: 1px solid $light-border;
       border-radius: 1em;
 
+      cursor: pointer;
+
       svg {
         width: 1.75em;
         height: 1.75em;
         color: $light-text-muted;
+      }
+
+      &:hover {
+        svg {
+          color: $light-text;
+        }
       }
     }
   }

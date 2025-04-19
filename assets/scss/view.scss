@@ -17,6 +17,10 @@
       svg {
         width: 1.5em;
       }
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
     }
 
     .text {
@@ -36,8 +40,17 @@
       align-items: center;
 
       padding: 8px 16px;
+
+      cursor: pointer;
+
       svg {
         width: 1.5em;
+        color: $light-text-muted;
+      }
+      &:hover {
+        svg {
+          color: $light-text;
+        }
       }
     }
   }

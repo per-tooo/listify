@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+    <script src="../assets/js/view.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -55,7 +56,9 @@
       </header>
 
       <!-- groceries / need to by thingies -->
-      <div class="items">
+      <div class="items"></div>
+
+      <template>
         <div class="item">
           <!-- drag and drop / sort -->
           <div class="handle">
@@ -96,7 +99,7 @@
             </svg>
           </div>
         </div>
-      </div>
+      </template>
 
       <!-- input -->
       <div class="input">

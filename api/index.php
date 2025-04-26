@@ -6,6 +6,7 @@
   $dbHost = "toooserv";
   $dbUser = "listify";
   $dbName = "listify";
+  $dbTable = "inst_0";
 
   $dsn = "mysql:host=$host;dbname=$dbName";
   $options = [
@@ -35,7 +36,7 @@
         exit;
       }
 
-      $stmt = "INSERT INTO lists (title, content) VALUES (:title, :content)";
+      $stmt = "INSERT INTO $dbTable (title, content) VALUES (:title, :content)";
       $stmt->execute([
         ":title" => $data["title"],
         ":content" => json_encode($data["content"])
@@ -48,7 +49,7 @@
     case preg_match("#^/list/delete/(\d+)$#", $path, $matches):
       $id = (int)$matches[1];
 
-      $stmt = "DELETE FROM lists WHERE id=?";
+      $stmt = "DELETE FROM $dbTable WHERE id=?";
       $stmt->execute([$id]);
 
       echo json_encode([ "success" => $stmt->rowCount() > 0 ]);
@@ -58,7 +59,7 @@
     case preg_match("#^/list/view/(\d+)$#", $path, $matches):
       $id = (int)$matches[1];
 
-      $stmt = $pdo->prepare("SELECT * FROM lists WHERE id=?");
+      $stmt = $pdo->prepare("SELECT * FROM $dbTable WHERE id=?");
       $stmt->execute([$id]);
       $item = $stmt->fetch();
 
@@ -72,7 +73,7 @@
 
     // listAll
     case $path === '/list/listAll':
-      $stmt = $pdo->query("SELECT id, title from lists");
+      $stmt = $pdo->query("SELECT id, title from $dbTable");
       $lists = $stmt->fetchAll();
       echo json_encode($lists);
     break;
